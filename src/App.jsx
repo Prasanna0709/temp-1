@@ -1,8 +1,8 @@
 import {BrowserRouter,Routes,Route} from "react-router-dom"
 import './App.css'
-import Page1 from "./pages/Page1"
-import Page2 from "./pages/Page2"
 import Homepage from "./pages/Homepage"
+import UsersPage from "./pages/UsersPage"
+import ProductsPage from "./pages/ProductsPage"
 import Navbar from "./pages/Navbar"
 
 function App() {
@@ -11,9 +11,9 @@ function App() {
       <BrowserRouter>
       <Navbar/>
         <Routes>
-          <Route element={<Homepage/>} path="/"/>
-          <Route element={<Page2/>} path="/page2" />
-          <Route element={<Page1/>} path="/page1"/>
+          <Route path="/" element={<Homepage/>}/>
+          <Route path="/users" element={<UsersPage/>}/>
+          <Route path="/products" element={<ProductsPage/>}/>
         </Routes>
       </BrowserRouter>
       )
