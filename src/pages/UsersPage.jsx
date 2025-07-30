@@ -10,7 +10,7 @@ const UsersPage = () => {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("http://13.51.107.169/api/users");
+      const response = await axios.get("http://13.53.39.155/api/users");
       console.log(response.data);
       setUsers(response.data.usersList);
     } catch (error) {
@@ -19,7 +19,7 @@ const UsersPage = () => {
   };
 
   const handleUserDelete = async (id) => {
-    await axios.delete(`http://13.51.107.169/api/users/delete/${id}`);
+    await axios.delete(`http://13.53.39.155/api/users/delete/${id}`);
     fetchUsers();
   };
 
