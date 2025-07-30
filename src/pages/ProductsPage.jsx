@@ -10,7 +10,7 @@ const ProductsPage = () => {
 
   const fetchProductsDetails = async () => {
     try {
-      const response = await axios.get("http://localhost/api/products");
+      const response = await axios.get("http://13.51.107.169/api/products");
       // console.log(response.data);
       setProducts(response.data.productsList);
     } catch (error) {
@@ -19,7 +19,7 @@ const ProductsPage = () => {
   };
 
   const handleProductDelete = async (id) => {
-    await axios.delete(`http://localhost/api/products/delete/${id}`);
+    await axios.delete(`http://13.51.107.169/api/products/delete/${id}`);
     fetchProductsDetails();
   };
 
