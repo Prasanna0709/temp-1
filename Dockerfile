@@ -36,4 +36,4 @@ COPY ./my-app.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80 
 
 # Comand executing to run the nginx as not a Backgroudn process to run it in the fr mode 
-CMD ["nginx","-g","daemon off"]
+CMD ["nginx", "-g", "daemon off;"]
