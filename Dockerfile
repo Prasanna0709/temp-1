@@ -27,7 +27,7 @@ RUN rm -rf /usr/share/nginx/html/*
 
 # Now we want to change the default nginx conf file to our conf file
 # Copy the newly builded index.html to the default nginx html folder
-COPY --from=build /app/dist /usr/share/nginx/html
+COPY --from=build /app/dist/* /usr/share/nginx/html
 
 # Copying the our nginx conf file to the default conf files folder
 COPY ./my-app.conf /etc/nginx/conf.d/default.conf
