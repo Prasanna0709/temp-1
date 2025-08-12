@@ -1,0 +1,7 @@
+services:
+  react-app:
+    build: .
+    container_name: Frontend-App-1-Container
+    ports:
+      - "8012:80"
+    restart: always
