@@ -1,5 +1,5 @@
 # Include node js Image in the base images 
-FROM node:24.5-alpine AS build
+FROM node:24.5-alpine as build
 
 # Creating the Working dir for the Image creation process
 WORKDIR /app
@@ -20,10 +20,10 @@ RUN npm run build
 # Nginx steps 
 
 # We want to include the nginx image as in the Base image
-FROM nginx
+FROM nginx:alpine
 
 # Remove the older available html files from the default nginx available files 
-RUN rm -rf /usr/share/nginx/html/*
+# RUN rm -rf /usr/share/nginx/html/*
 
 # Now we want to change the default nginx conf file to our conf file
 # Copy the newly builded index.html to the default nginx html folder
